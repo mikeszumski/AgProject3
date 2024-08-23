@@ -1,0 +1,17 @@
+These crops are represented across multiple years in the NASS Survey data.
+
+Barley
+Blueberries (limited data)
+Corn
+Cotton
+Hey
+Oats
+Peanuts
+Bell Peppers
+Pumpkins
+Soybeans
+Squash
+Sweet Potatoes
+Tobacco
+Wheat
+
