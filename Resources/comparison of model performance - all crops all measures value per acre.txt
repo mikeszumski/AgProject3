@@ -1,0 +1,40 @@
+
+Comparing model accuracy. Measure: MSE
+for MSE, the best values are as low a possible.
+model
+RandomForestRegressor()        0.817465
+SVR()                          0.988388
+LinearRegression()             1.130910
+GradientBoostingRegressor()    1.188347
+DecisionTreeRegressor()        1.429688
+Name: MSE, dtype: float64
+
+Comparing model accuracy. Measure: R2
+for R2, the best values are as close to 1.0 as possible.
+model
+RandomForestRegressor()        0.182535
+SVR()                          0.011612
+LinearRegression()            -0.130910
+GradientBoostingRegressor()   -0.188347
+DecisionTreeRegressor()       -0.429688
+Name: R2, dtype: float64
+
+Comparing model accuracy. Measure: Mean_abs_error
+for Mean_abs_error, the best values are as low a possible.
+model
+RandomForestRegressor()        0.785933
+GradientBoostingRegressor()    0.845323
+SVR()                          0.864291
+DecisionTreeRegressor()        0.901593
+LinearRegression()             0.912164
+Name: Mean_abs_error, dtype: float64
+
+Comparing model accuracy. Measure: Explained var
+for Explained var, the best values are as close to 1.0 as possible.
+model
+RandomForestRegressor()        0.186453
+SVR()                          0.030550
+LinearRegression()            -0.130910
+GradientBoostingRegressor()   -0.151843
+DecisionTreeRegressor()       -0.341416
+Name: Explained var, dtype: float64

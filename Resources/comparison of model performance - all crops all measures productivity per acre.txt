@@ -1,0 +1,43 @@
+Measures of productivity per acre
+
+Again, when we look across all crops, the numbers are pretty poor.
+
+Comparing model accuracy. Measure: MSE
+for MSE, the best values are as low a possible.
+model
+SVR()                          1.124498
+RandomForestRegressor()        1.156008
+GradientBoostingRegressor()    1.380616
+DecisionTreeRegressor()        1.923556
+LinearRegression()             2.153253
+Name: MSE, dtype: float64
+
+Comparing model accuracy. Measure: R2
+for R2, the best values are as close to 1.0 as possible.
+model
+SVR()                         -0.124498
+RandomForestRegressor()       -0.156008
+GradientBoostingRegressor()   -0.380616
+DecisionTreeRegressor()       -0.923556
+LinearRegression()            -1.153253
+Name: R2, dtype: float64
+
+Comparing model accuracy. Measure: Mean_abs_error
+for Mean_abs_error, the best values are as low a possible.
+model
+RandomForestRegressor()        0.897904
+SVR()                          0.899631
+GradientBoostingRegressor()    0.964289
+DecisionTreeRegressor()        1.101536
+LinearRegression()             1.175597
+Name: Mean_abs_error, dtype: float64
+
+Comparing model accuracy. Measure: Explained var
+for Explained var, the best values are as close to 1.0 as possible.
+model
+SVR()                         -0.117514
+RandomForestRegressor()       -0.144003
+GradientBoostingRegressor()   -0.313082
+DecisionTreeRegressor()       -0.835474
+LinearRegression()            -1.153253
+Name: Explained var, dtype: float64
