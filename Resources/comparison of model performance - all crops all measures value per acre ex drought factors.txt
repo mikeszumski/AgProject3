@@ -1,0 +1,43 @@
+Measures of accuracy, with drought features removed.
+targets are $ per acre
+
+
+Comparing model accuracy. Measure: MSE
+for MSE, the best values are as low a possible.
+model
+RandomForestRegressor()        0.869479
+SVR()                          0.874845
+LinearRegression()             1.121093
+GradientBoostingRegressor()    1.213431
+DecisionTreeRegressor()        1.583945
+Name: MSE, dtype: float64
+
+Comparing model accuracy. Measure: R2
+for R2, the best values are as close to 1.0 as possible.
+model
+RandomForestRegressor()        0.130521
+SVR()                          0.125155
+LinearRegression()            -0.121093
+GradientBoostingRegressor()   -0.213431
+DecisionTreeRegressor()       -0.583945
+Name: R2, dtype: float64
+
+Comparing model accuracy. Measure: Mean_abs_error
+for Mean_abs_error, the best values are as low a possible.
+model
+RandomForestRegressor()        0.807833
+SVR()                          0.830029
+GradientBoostingRegressor()    0.874438
+LinearRegression()             0.910340
+DecisionTreeRegressor()        0.945429
+Name: Mean_abs_error, dtype: float64
+
+Comparing model accuracy. Measure: Explained var
+for Explained var, the best values are as close to 1.0 as possible.
+model
+SVR()                          0.142781
+RandomForestRegressor()        0.137291
+LinearRegression()            -0.121093
+GradientBoostingRegressor()   -0.180448
+DecisionTreeRegressor()       -0.526415
+Name: Explained var, dtype: float64
