@@ -1,6 +1,8 @@
 # AG PROJECT (Project 3)
 This repository shares the source data, examination approach, data analytics script and key findings of an examination of agricultural production and demographics data for the 100 counties in North Carolina.
 
+The data supports an application that assists farm managers in their choice of crop (given rainfall, temperature and drought forecasts), and recommends suitable crop insurance programs.
+
 ## EXECUTIVE SUMMARY
 
 ### Project Objectives
@@ -18,7 +20,8 @@ To examine the impacts of weather events, particularly flooding, on North Caroli
 ![Approach graphic](/Images/image-name.png)
 
 Modeling for this project was conducted in [two] parts:
-1) [PART 1 NAME] 
+1) A Crop Prediction model was trained on historical North Carolina temperature, rainfall, crop yield and dollar value of crop per acre.  Several regression models were employed to find optimal quality of prediction for each commodity grown in North Carolina.  the crop prediction function employs trained models and associated quality metrics to return a new prediction and confidence level using forecast rainfall and temperature data.
+
 2) [PART 2 NAME]
 
 
