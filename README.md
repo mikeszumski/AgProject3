@@ -34,28 +34,43 @@ For making determinations on actions farmers should take (i.e., plant, plant wit
 ### 4 - Recommendation Builder
 
 ## INSTRUCTIONS
-We have provided several type of instructions for using this repository: Using the Crop Planning and Protection Tool, from running the code used to build the tool and running any of the crop prediction models that support the tool. 
+We have provided instructions for running the code required to use to build and use the tool as well as standalone instructions for running any of the crop prediction models alone. 
 
-### To Use the Tool
-To use the tool ...
+### To Build and Use the Tool
+To use the Ag Planning Tool, 
 
-### To Run the Ag Planning Tool Code
-To run the code ....
+1) Clone this repository to your local machine. 
+
+2) Select your LLM.
+
+    As currently configured, the [ag_planning_tool notebook](ag_planning_tool.ipynb) uses a local LLM to enable the Decision Logic and RAG functionality.  configured for using a locally run [Ollama](https://ollama.com/download) server loaded with Ollama's [phi3-mini](https://ollama.com/library/phi3) model. See linked documentation for install and loading instructinos. 
+    
+    _(Alternatively, users may use a hosted LLM, e.g., OpenAI, Claude, etc.. See _Section 0.0 Initial Setup_ to change LLM selection.)_
+
+    To launch Ollama Phi3-mini LLM,
+    1.  Start the Ollama service by running the following command: `ollama serve`
+    2.  Allow Ollama service to run in the background while running code
+    3.  Pull the latest update to the Ollama phi3 model by running the following command:`ollama pull phi3:mini`
+
+3) Run [ag_planning_tool notebook](ag_planning_tool.ipynb)
+
+    Note that documents included in the RAG functionality are locatated in the [rag_content](/rag_content/) folder. See _User Note_ in Section 3.1 to modify file path for source documentents.
+
 
 ### To Run Models
-To run any of the crop prediction models models located in the [Resources](./Resources/) folder ...
+To run any of the crop prediction models models located in the [Resources](./Resources/) folder see 
 
 
 ## REFERENCES
 ### Dependencies
 For Local LLM Installation
-* Ollama _([download](https://ollama.com/download/windows))_ running 'phi3:mini' model _([documentation](https://ollama.com/library/phi3))_
+* Ollama _([download page](https://ollama.com/download/windows))_ running [phi3:mini model](https://ollama.com/library/phi3)_
 
 For RAG Development
-* LangChain - See [documentation](https://python.langchain.com/v0.2/docs/introduction)
-* Unstructured - See [documentation](https://docs.unstructured.io/welcome')
-* OpenAI - See [documentation](https://platform.openai.com/docs/guides/embeddings)
-* ChromaDB - See [documentation](https://docs.trychroma.com/getting-started)
+* LangChain - _See [documentation](https://python.langchain.com/v0.2/docs/introduction)_
+* Unstructured - _See [documentation](https://docs.unstructured.io/welcome')_
+* OpenAI - _See [documentation](https://platform.openai.com/docs/guides/embeddings)_
+* ChromaDB - _See [documentation](https://docs.trychroma.com/getting-started)_
 
 ### Libraries
 bs4
@@ -84,6 +99,8 @@ sklearn
 * svm
 * tree
 * ensemble
+tqdm
+* tqmd
 
 ### Data Providers
 * USDA National Agricultural Statistics Service (NASS)
