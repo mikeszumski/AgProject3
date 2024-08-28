@@ -49,13 +49,15 @@ To run any of the crop prediction models models located in the [Resources](./Res
 ## ADDITIONAL REFERENCE CONTENT
 ### Dependencies
 
-* For Local LLM 
+* For Local LLM Installation
     * Ollama _([dowload]('https://ollama.com/download/windows'))_ running 'phi3:mini' model _([documentation]('https://ollama.com/library/phi3'))_
 
 * For RAG Development
-    * LangChain - See [documentation]('https://python.langchain.com/v0.2/docs/introduction/'). 
+    * LangChain - See [documentation]('https://python.langchain.com/v0.2/docs/introduction')
+    
+    ] [documentation] ('https://python.langchain.com/v0.2/docs/introduction/'). 
     * Unstructured - See [documentation]('https://docs.unstructured.io/welcome').
-    * OpenAI - See  [documentation]('https://platform.openai.com/docs/guides/embeddings/'). converts documents into embeddings_
+    * OpenAI - See  [documentation]('https://platform.openai.com/docs/guides/embeddings/'). 
     * ChromaDB - See [documentation]('https://docs.trychroma.com/getting-started').
 
 
