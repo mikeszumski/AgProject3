@@ -7,6 +7,7 @@ Data evaluation and model development revealed the following:
 * RAG and prompt engineering impacted the quality of the performance of the LLM-generated advice;  augmentating the LLM with agricultural materials from USDA and NC Department of Agriculture yielded better crop-specific advice and enhanced the value of mitgation recommendations
 * Better crop performance predictions require additonal modeling features beyond weather 
 
+See the associated [presentation]('/UNC_AI_Bootcamp_Project_presented.pdf') file for addional context.
 
 ## APPROACH
 
@@ -14,47 +15,39 @@ Data evaluation and model development revealed the following:
 
 The project included four major components :
 
-### 1 - USER INTERFACE
- We developed a Gradio interface to capture user inputs (county, crops and planting year) and display final recommenations from the Crop Planning and Protection Tool. (The [code](ag_planning_tool.ipynb) also provdes and option to print the advice to a csv file, demonstrated in an early example [here](crop_advice.csv).)
+### 1 - User Interface
+ We developed a Gradio interface to capture user inputs (county, crops and planting year) and display final recommenations from the Crop Planning and Protection Tool. (Section 3.4 of the [Ag Planning Tool code](ag_planning_tool.ipynb) also provdes and option to print the advice to a csv file, demonstrated in an early example [here](crop_advice.csv).)
 
-### 2 - CROP PREDICTION MODEL
+### 2 - Crop Prediction Models
  To develop crop-specific performance predictions based on weather forecasts, we applied machine learning to trained several regression models on 20-years worth of North Carolina  avarage qand seasonal temperatures, avrage and seasonal precipitation, periods of severe, extreme and exceptional drought, crop-specific yields and the production value (dollar value of yield harvested) of each crop per acre. 
 
-To select models that proveded the best model accuracy and peformance, we iterated through several ML models, including Linear Regression, SVR, Decision Tree, Random Forest and Gradient Boost, evaluating each model's performance by crop type using multiple model performance measures (i.e., mean square error, R2 score, explained variance score, mean absolute error) to select the best performing model by crop type. 
+To select models that proveded the best model accuracy and peformance, we iterated through several ML models, including Linear Regression, SVR, Decision Tree, Random Forest and Gradient Boost, evaluating each model's performance by crop type using multiple model performance measures (i.e., mean square error, R2 score, explained variance score, mean absolute error) to select the best performing model by crop type (Barley, Bell Pepper, Corn, Cotton, Hay, Oat Peanut, Soybean, Squash, Sweet Potato, Tobacco and Wheat). 
 
 (Trained Models, their results and the data used to train them are available in the [Resources](./Resources/) folder.)
 
-### 3 - DECISION MODEL LOGIC
-1) _RAG-Enhanced ML_ - Local LLM model enhanced with USDA and NC Dept of Agriculture risk mangagement strategies, disaster assistance programs and farming best practices.
+### 3 - Decision Logic Model
+For making determinations on actions farmers should take (i.e., plant, plant with caution or do not plant the selected crop), we developed a function that   .
+
+(The code for the decision logic is included in section 2 of the [Ag Planning Tool code](ag_planning_tool.ipynb) also provdes and option to print the advice to a csv file, demonstrated in an early example [here](crop_advice.csv).)
 
 
-### 1 - CROP PREDICTION MODEL
+### 4 - Recommendation Builder
 
-* **Models:** 
+## INSTRUCTIONS
+We have provided several type of instructions for using this repository: Using the Crop Planning and Protection Tool, from running the code used to build the tool and running any of the crop prediction models that support the tool. 
 
-* **Datasets:** 
-    * Crop Data: evaluated USDA crop production data for Barley, Bell Pepper, Corn, Cotton, Hay, Oat Peanut, Soybean, Squash, Sweet Potato, Tobacco and Wheat crops, considering acres planted, yield, production volume, and value per acre
+### To Use the Tool
+To use the tool ...
 
+### To Run the Ag Planning Tool Code
+To run the code ....
 
-
-
-* **Instructions:** To load and run models [INSTRUCTIONS] 
- 
-### 2 - RAG-ENHANCED LLM
-
-* **Models** used to determine [ANALYSES included MODELS].
-    * Local Large LAnguage Model: ...
-
-    * Embeddings Model: ...
-
-
-* **Datasets** explored in our modeling and analysis are [what and where]. 
-
-* **Instructions:** To load and run models [INSTRUCTIONS]  
+### To Run Models
+To run any of the crop prediction models models located in the [Resources](./Resources/) folder ...
 
 
 
-See the associated [presentation]('/UNC_AI_Bootcamp_Project_presented.pdf') file for addional context.
+
 
 ## ADDITIONAL REFERENCE CONTENT
 ### Python Libraries
