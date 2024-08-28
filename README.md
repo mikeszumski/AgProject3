@@ -46,14 +46,15 @@ To run the code ....
 To run any of the crop prediction models models located in the [Resources](./Resources/) folder ...
 
 
-
-
-
 ## ADDITIONAL REFERENCE CONTENT
 ### Dependencies
+* Machine Learning Models
+
+
 * Natural Lanugage Processing
     * Local LLM:  Ollama _([dowload]('https://ollama.com/download/windows'))_ running 'phi3:mini' model _([documentation]('https://ollama.com/library/phi3'))_
     * Hosted LLM: OpenAI _([documentation]('https://platform.openai.com/docs/overview'))_ _(ALTERNATIVE)_ 
+
 * Document Loading, Embedding and Retrieval
     * LangChain _([documentation]('https://python.langchain.com/v0.2/docs/introduction/')) loads and splits documents_
     * Unstructured _([documentation]('https://docs.unstructured.io/welcome')) pre-processes pdf documents_
@@ -61,17 +62,38 @@ To run any of the crop prediction models models located in the [Resources](./Res
     * ChromaDB _([documentation]('https://docs.trychroma.com/getting-started')) stores embeddings_
 
 
-### Python Libraries
-Libaries used to conduct these analysis include 
-* numpy
-* pandas
-* matplotlib
-* sklearn
-* statsmodels
-* requests
-* json
+### Libraries
+bs4
+ * BeautifulSoup
+
+gradio
+* gr
+
+python Libraries
+* ollama
+* openai
 * os
-* datetime
+* nltk
+* numpy
+* nltk
+* pandas
+* pickle 
+* re
+* warnings
+* time
+
+langchain
+* chains
+* llms
+* prompts
+
+sklearn
+* preprocessing
+* linear_model
+* svm
+* tree
+* ensemble
+
 
 ### Data Sources
 * USDA National Agricultural Statistics Service (NASS)
