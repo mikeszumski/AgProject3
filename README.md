@@ -46,28 +46,22 @@ To run the code ....
 To run any of the crop prediction models models located in the [Resources](./Resources/) folder ...
 
 
-## ADDITIONAL REFERENCE CONTENT
+## REFERENCES
 ### Dependencies
+For Local LLM Installation
+* Ollama _([download]('https://ollama.com/download/windows'))_ running 'phi3:mini' model _([documentation]('https://ollama.com/library/phi3'))_
 
-* For Local LLM Installation
-    * Ollama _([dowload]('https://ollama.com/download/windows'))_ running 'phi3:mini' model _([documentation]('https://ollama.com/library/phi3'))_
-
-* For RAG Development
-    * LangChain - See [documentation]('https://python.langchain.com/v0.2/docs/introduction')
-    
-    ] [documentation] ('https://python.langchain.com/v0.2/docs/introduction/'). 
-    * Unstructured - See [documentation]('https://docs.unstructured.io/welcome').
-    * OpenAI - See  [documentation]('https://platform.openai.com/docs/guides/embeddings/'). 
-    * ChromaDB - See [documentation]('https://docs.trychroma.com/getting-started').
-
+For RAG Development
+* LangChain - See [documentation]('https://python.langchain.com/v0.2/docs/introduction')
+* Unstructured - See [documentation]('https://docs.unstructured.io/welcome')
+* OpenAI - See [documentation]('https://platform.openai.com/docs/guides/embeddings/')
+* ChromaDB - See [documentation]('https://docs.trychroma.com/getting-started')
 
 ### Libraries
 bs4
  * BeautifulSoup
-
 gradio
 * gr
-
 python
 * ollama
 * openai
@@ -80,12 +74,10 @@ python
 * re
 * warnings
 * time
-
 langchain
 * chains
 * llms
 * prompts
-
 sklearn
 * preprocessing
 * linear_model
@@ -93,18 +85,16 @@ sklearn
 * tree
 * ensemble
 
-
 ### Data Sources
 * USDA National Agricultural Statistics Service (NASS)
 * North Carolina Department of Agriculture
 * National Integrated Drought Information System
 * NOAA Climate Perdition Center
 
-
-### Project Contributors
+## CONTRIBUTORS
 * Michael Szumski | [GitHub @mikeszumski](https://github.com/mikeszumski/)
 * Jamie Bond | [GitHub @JBondAI](https://github.com/jbondAI/) 
 
-## Other Acknowledgments
+## ACKNOWLEGEMENTS
 * Project instruction and requirements provided by [The Artificial Intelligence Boot Camp at UNC Charlotte](https://bootcamp.charlotte.edu/artificial-intelligence/)
 
