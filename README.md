@@ -50,6 +50,17 @@ To run any of the crop prediction models models located in the [Resources](./Res
 
 
 ## ADDITIONAL REFERENCE CONTENT
+### Dependencies
+* Natural Lanugage Processing
+    * Local LLM:  Ollama _([dowload]('https://ollama.com/download/windows'))_ running 'phi3:mini' model _([documentation]('https://ollama.com/library/phi3'))_
+    * Hosted LLM: OpenAI _([documentation]('https://platform.openai.com/docs/overview'))_ _(ALTERNATIVE)_ 
+* Document Loading, Embedding and Retrieval
+    * LangChain _([documentation]('https://python.langchain.com/v0.2/docs/introduction/')) loads and splits documents_
+    * Unstructured _([documentation]('https://docs.unstructured.io/welcome')) pre-processes pdf documents_
+    * OpenAI _([documentation]('https://platform.openai.com/docs/guides/embeddings/')) converts documents into embeddings_
+    * ChromaDB _([documentation]('https://docs.trychroma.com/getting-started')) stores embeddings_
+
+
 ### Python Libraries
 Libaries used to conduct these analysis include 
 * numpy
