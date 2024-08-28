@@ -1,0 +1,13 @@
+﻿Crop,Action,Considerations
+Barley,Plant,will grow well in the predicted weather conditions
+Corn,Plant,will grow well in the predicted weather conditions
+Cotton,Plant with caution,average yield predicted however prediction model results may have low accuracy 
+Hey,Do not plan,lower than average yield in the predicted weather conditions
+Oats,Do not plan,lower than average yield in the predicted weather conditions
+Peanuts,Plant,will grow well in the predicted weather conditions
+Bell Peppers,Plant,will grow well in the predicted weather conditions
+Soybeans,Plant with caution,average yield predicted however prediction model results may have low accuracy 
+Squash,Do not plan,lower than average yield in the predicted weather conditions
+Sweet Potatoes,Do not plan,lower than average yield in the predicted weather conditions
+Tobacco,Do not plan,lower than average yield in the predicted weather conditions
+Wheat,Do not plan,lower than average yield in the predicted weather conditions
