@@ -39,7 +39,7 @@ We enhanced the LLM with a small sampling of [content](/rag_content/) aquired fr
 
 Once equiped with the addtional RAG content, we developed a recomendation generation function that will accept a dataframe variable containing the crop performance data, the decisions from the decision logic model and associated justifications. The recommendation builder then, using the RAG-enhanced LLM, generates a recommendation narrative along with additional considerations and mitagation information for each crop.
 
-The final recommendations are passed back to the user interface as an output. (Section 3.4 for the [ag_planning_tool.ipynb](ag_planning_tool.ipynb) notbook also enables users to create a download of the recommendtation in CSV format. See an early example here: [crop_advice](crop_advice.csv)) 
+The final recommendations are passed back to the user interface as an output. (Section 3.4 for the [ag_planning_tool.ipynb](ag_planning_tool.ipynb) notebook also enables users to create a download of the recommendtation in CSV format. See an early example here: [crop_advice](crop_advice.csv)) 
 
 
 ## INSTRUCTIONS
@@ -52,9 +52,9 @@ To use the Ag Planning Tool,
 
 2) **Select your prefered LLM.**
 
-    As currently configured, the [ag_planning_tool.ipynb](ag_planning_tool.ipynb) notbook  uses a local LLM to enable the Decision Logic and RAG functionality.  configured for using a locally run [Ollama](https://ollama.com/download) server loaded with Ollama's [phi3-mini](https://ollama.com/library/phi3) model. See linked documentation for install and loading instructinos. 
+    As currently configured, the [ag_planning_tool.ipynb](ag_planning_tool.ipynb) notebook  uses a local LLM to enable the Decision Logic and RAG functionality.  configured for using a locally run [Ollama](https://ollama.com/download) server loaded with Ollama's [phi3-mini](https://ollama.com/library/phi3) model. See linked documentation for install and loading instructinos. 
     
-    _(Alternatively, users may use a hosted LLM, e.g., OpenAI, Claude, etc.. See _Section 0.0 Initial Setup_ to change LLM selection.)_
+    _(Alternatively, users may use a hosted LLM, e.g., OpenAI, Claude, etc. See _Section 0.0 Initial Setup_ to change LLM selection.)_
 
     To load the Ollama phi3:mini LLM locally
     * Start the Ollama service by running the following command in a CLI: `ollama serve` 
