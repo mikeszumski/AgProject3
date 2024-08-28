@@ -13,7 +13,7 @@ See the associated [presentation]('/UNC_AI_Bootcamp_Project_presented.pdf') file
 
 ![Approach graphic](/Images/approach_image.png)
 
-The project included four major components :
+The project included four major components:
 
 ### 1 - User Interface
  We developed a Gradio interface to capture user inputs (county, crops and planting year) and display final recommenations from the Crop Planning and Protection Tool. (Section 3.4 of the [Ag Planning Tool code](ag_planning_tool.ipynb) also provdes and option to print the advice to a csv file, demonstrated in an early example [here](crop_advice.csv).)
@@ -26,17 +26,22 @@ To select models that proveded the best model accuracy and peformance, we iterat
 (Trained Models, their results and the data used to train them are available in the [Resources](./Resources/) folder.)
 
 ### 3 - Decision Logic Model
-For making determinations on actions farmers should take (i.e., plant, plant with caution or do not plant the selected crop), we developed a function that   .
+For making determinations on actions farmers should take (i.e., plant, plant with caution or do not plant the selected crop), we developed a function that compares the predicted performance of a selected crop with its respective 20-year average performance and then catagorizes the crop into one of three groups: 
+* Crops to plant - _crops the tool will eventual recommend for planting given the weather forecast_
+* Crops to plant with cautioned - _crops the tool may or may not recommend given the confidence of the prediction and the indivdual farmer's past performance compared to the state average yield_
+* Crops not to plant - _crops the tool will recommend avoiding given the weather forecast_\
+\
+The results are passed to an LLM to develop a justification narrative to support the decision.
 
 (The code for the decision logic is included in section 2 of the [Ag Planning Tool code](ag_planning_tool.ipynb) also provdes and option to print the advice to a csv file, demonstrated in an early example [here](crop_advice.csv).)
 
-
 ### 4 - Recommendation Builder
+To develop crop-specific performance predictions based on weather forecasts, we applied machine learning to trained several regression models on 20-years worth of North Carolina  avarage qand seasonal temperatures, avrage and seasonal precipitation, periods of severe, extreme and exceptional drought, crop-specific yields and the production value (dollar value of yield harvested) of each crop per acre. 
 
 ## INSTRUCTIONS
 We have provided instructions for running the code required to use to build and use the tool as well as standalone instructions for running any of the crop prediction models alone. 
 
-### To Build and Use the Tool
+### To Run the AG Planning Tool
 To use the Ag Planning Tool, 
 
 1) Clone this repository to your local machine. 
@@ -47,17 +52,23 @@ To use the Ag Planning Tool,
     
     _(Alternatively, users may use a hosted LLM, e.g., OpenAI, Claude, etc.. See _Section 0.0 Initial Setup_ to change LLM selection.)_
 
-    To launch Ollama Phi3-mini LLM,
-    1.  Start the Ollama service by running the following command: `ollama serve`
-    2.  Allow Ollama service to run in the background while running code
-    3.  Pull the latest update to the Ollama phi3 model by running the following command:`ollama pull phi3:mini`
+    To load the Ollama phi3:mini LLM locally
+    * Start the Ollama service by running the following command in a CLI: `ollama serve` 
+    * To confirm the services is running, open a new terminal and run the following commnand: `ollama list`
+    * Pull the latest update to the Ollama phi3 model by running the following:`ollama pull phi3:mini`
+   
+    To launch phi3:mini LLM
+    * Start the Ollama service by running the following command in a CLI: `ollama serve`
+    * Minimize the CLI window and allow Ollama service to run in the background while running the code
+    * To launch the model, open a new terminal and run the following commnand: `ollama run phi3:mini`
 
-3) Run [ag_planning_tool notebook](ag_planning_tool.ipynb)
 
-    Note that documents included in the RAG functionality are locatated in the [rag_content](/rag_content/) folder. See _User Note_ in Section 3.1 to modify file path for source documentents.
+3) Run [ag_planning_tool.ipynb] notebook (ag_planning_tool.ipynb)
+
+    **NOTE**: Documents included in the RAG functionality are locatated in the [rag_content](/rag_content/) folder. See _User Note_ in Section 3.1 to modify file path for source documentents.
 
 
-### To Run Models
+### To Run Individual Crop Prediction Models
 To run any of the crop prediction models models located in the [Resources](./Resources/) folder see 
 
 
