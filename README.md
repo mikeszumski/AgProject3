@@ -16,12 +16,12 @@ See the associated [presentation]('/UNC_AI_Bootcamp_Project_presented.pdf') file
 The project included four major components:
 
 ### 1 - User Interface
-We developed a Gradio interface to capture user inputs (county, crops and planting year) and display final recommenations from the Crop Planning and Protection Tool. (Section 3.4 of the [Ag Planning Tool code](ag_planning_tool.ipynb) also provdes and option to print the advice to a csv file, demonstrated in an early example [here](crop_advice.csv).)
+We developed a Gradio interface to capture user inputs (county, crops and planting year) and display final recommenations from the Crop Planning and Protection Tool. (Section 3.4 of the [ag_planning_tool.ipynb](ag_planning_tool.ipynb) notebook also provdes and option to print the advice to a csv file, demonstrated in an early example [here](crop_advice.csv).)
 
 ### 2 - Crop Prediction Models
 To develop crop-specific performance predictions based on weather forecasts, we applied machine learning to trained several regression models on 20-years worth of North Carolina  avarage qand seasonal temperatures, avrage and seasonal precipitation, periods of severe, extreme and exceptional drought, crop-specific yields and the production value (dollar value of yield harvested) of each crop per acre. 
 
-To select models that proveded the best model accuracy and peformance, we iterated through several ML models, including Linear Regression, SVR, Decision Tree, Random Forest and Gradient Boost, evaluating each model's performance by crop type using multiple model performance measures (i.e., mean square error, R2 score, explained variance score, mean absolute error) to select the best performing model by crop type (Barley, Bell Pepper, Corn, Cotton, Hay, Oat Peanut, Soybean, Squash, Sweet Potato, Tobacco and Wheat). 
+To select models that proveded the best model accuracy and peformance, we iterated through several ML models, including Linear Regression, SVR, Decision Tree, Random Forest and Gradient Boost, evaluating each model's performance by crop type using multiple model performance measures (i.e., mean square error, R2 score, explained variance score, mean absolute error) to select the best performing model by crop type (Barley, Bell Peppers, Corn, Cotton, Hay, Oats, Peanuts, Soybeans, Squash, Sweet Potatoes, Tobacco and Wheat). 
 
 (Trained models, their results and the data used to train them are available in the [Resources](./Resources/) folder.)
 
@@ -29,7 +29,8 @@ To select models that proveded the best model accuracy and peformance, we iterat
 For making determinations on actions farmers should take (i.e., plant, plant with caution or do not plant the selected crop), we developed a function that compares the predicted performance of a selected crop with its respective 20-year average performance and then catagorizes the crop into one of three groups: 
 * **Crops to plant** - _crops the tool will eventual recommend for planting given the weather forecast_
 * **Crops to plant with caution** - _crops the tool may or may not recommend given the confidence of the prediction and the indivdual farmer's past performance compared to the state average yield_
-* **Crops to avoid** - _crops the tool will recommend avoiding given the weather forecast_
+* **Crops to avoid** - _crops the tool will recommend avoiding given the weather forecast_ \
+\
 The results are passed to an LLM to develop a justification narrative to support the decision.
 
 ### 4 - Recommendation Builder
@@ -39,7 +40,7 @@ We enhanced the LLM with a small sampling of [content](/rag_content/) aquired fr
 
 Once equiped with the addtional RAG content, we developed a recomendation generation function that will accept a dataframe variable containing the crop performance data, the decisions from the decision logic model and associated justifications. The recommendation builder then, using the RAG-enhanced LLM, generates a recommendation narrative along with additional considerations and mitagation information for each crop.
 
-The final recommendations are passed back to the user interface as an output. (Section 3.4 for the [ag_planning_tool.ipynb](ag_planning_tool.ipynb) notebook also enables users to create a download of the recommendtation in CSV format. See an early example here: [crop_advice](crop_advice.csv)) 
+The final recommendations are passed back to the user interface as an output. (Section 3.4 for the [ag_planning_tool.ipynb](ag_planning_tool.ipynb) notebook also enables users to create a download of the recommendtation in CSV format. See an early example here: _[crop_advice](crop_advice.csv)_) 
 
 
 ## INSTRUCTIONS
@@ -73,7 +74,7 @@ To use the Ag Planning Tool,
 
 
 ### To Run Individual Crop Prediction Models
-To run any of the crop prediction models models located in the [Resources](./Resources/) folder see 
+To run any of the crop prediction models models located in the [Resources](./Resources/) folder run the _[crop_prediction.ipynb](crop_prediction.ipynb)_ notebook.  Example inputs and model runs are provided within the notebook for reference.
 
 
 ## REFERENCES
