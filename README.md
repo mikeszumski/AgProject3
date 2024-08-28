@@ -49,13 +49,13 @@ To run any of the crop prediction models models located in the [Resources](./Res
 ## REFERENCES
 ### Dependencies
 For Local LLM Installation
-* Ollama _([download]('https://ollama.com/download/windows'))_ running 'phi3:mini' model _([documentation]('https://ollama.com/library/phi3'))_
+* Ollama _([download](https://ollama.com/download/windows))_ running 'phi3:mini' model _([documentation](https://ollama.com/library/phi3))_
 
 For RAG Development
-* LangChain - See [documentation]('https://python.langchain.com/v0.2/docs/introduction')
-* Unstructured - See [documentation]('https://docs.unstructured.io/welcome')
-* OpenAI - See [documentation]('https://platform.openai.com/docs/guides/embeddings/')
-* ChromaDB - See [documentation]('https://docs.trychroma.com/getting-started')
+* LangChain - See [documentation](https://python.langchain.com/v0.2/docs/introduction)
+* Unstructured - See [documentation](https://docs.unstructured.io/welcome')
+* OpenAI - See [documentation](https://platform.openai.com/docs/guides/embeddings)
+* ChromaDB - See [documentation](https://docs.trychroma.com/getting-started)
 
 ### Libraries
 bs4
@@ -85,7 +85,7 @@ sklearn
 * tree
 * ensemble
 
-### Data Sources
+### Data Providers
 * USDA National Agricultural Statistics Service (NASS)
 * North Carolina Department of Agriculture
 * National Integrated Drought Information System
