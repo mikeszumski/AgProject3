@@ -76,6 +76,14 @@ To use the Ag Planning Tool,
 ### To Run Individual Crop Prediction Models
 To run any of the crop prediction models models located in the [Resources](./Resources/) folder run the _[crop_prediction.ipynb](crop_prediction.ipynb)_ notebook.  Example inputs and model runs are provided within the notebook for reference.
 
+## Code modules for the crop model
+
+**transform_crop_data.jpyng** - transform raw data by reshaping it, filtering it (a lot!), interpolating gaps, and ensuring the targets align with the features.
+
+**modelCropWeatherV3.jpynb** - train and pickle the models used by the crop_prediction function
+
+**crop_prediction.jpynb** - the crop prediction function takes user-supplied target value (e.g. CORN_$_ACRE) and an array of weather forecast data points (rainfall, temperature, drought) and returns a predicted value.  Accompanying that prediction are: average of that measure over past 20 years, model confidence level indicator (H)igh, (M)edium, (L)ow
+
 
 ## REFERENCES
 ### Dependencies
