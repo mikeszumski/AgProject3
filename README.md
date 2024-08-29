@@ -40,7 +40,7 @@ We enhanced the LLM with a small sampling of [content](/rag_content/) aquired fr
 
 Once equiped with the addtional RAG content, we developed a recomendation generation function that will accept a dataframe variable containing the crop performance data, the decisions from the decision logic model and associated justifications. The recommendation builder then, using the RAG-enhanced LLM, generates a recommendation narrative along with additional considerations and mitagation information for each crop.
 
-The final recommendations are passed back to the user interface as an output. (Section 3.4 for the [ag_planning_tool.ipynb](ag_planning_tool.ipynb) notebook also enables users to create a download of the recommendtation in CSV format. See an early example here: _[crop_advice](crop_advice.csv)_) 
+The final recommendations are passed back to the user interface as an output.  
 
 
 ## INSTRUCTIONS
@@ -49,7 +49,7 @@ We have provided instructions for running the code required to use to build and 
 ### To Run the AG Planning Tool
 To use the Ag Planning Tool, 
 
-1) **Clone this repository to your local machine.** 
+1) **Fork this repository and clone to your local machine.** 
 
 2) **Select your prefered LLM.**
 
